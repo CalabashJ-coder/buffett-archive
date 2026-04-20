@@ -1,0 +1,597 @@
+/**
+ * The Buffett Archive - Custom CSS
+ * Theme: White, Navy, Gold - Minimalist
+ */
+
+/* ================================
+   CSS Variables / Design Tokens
+   ================================ */
+:root {
+  /* Primary Colors - Navy */
+  --ifm-color-primary: #1e3a5f;
+  --ifm-color-primary-dark: #1a3354;
+  --ifm-color-primary-darker: #18304e;
+  --ifm-color-primary-darkest: #132840;
+  --ifm-color-primary-light: #22416a;
+  --ifm-color-primary-lighter: #244470;
+  --ifm-color-primary-lightest: #2a4d7d;
+
+  /* Accent - Gold */
+  --color-gold: #c9a227;
+  --color-gold-light: #d4b44a;
+  --color-gold-dark: #a88a1f;
+
+  /* Neutrals */
+  --color-white: #ffffff;
+  --color-off-white: #f8f9fa;
+  --color-light-gray: #e9ecef;
+  --color-medium-gray: #6c757d;
+  --color-dark-gray: #343a40;
+  --color-navy: #1e3a5f;
+
+  /* Typography */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-heading-font-family: Georgia, 'Times New Roman', serif;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.6;
+
+  /* Spacing */
+  --ifm-spacing-horizontal: 16px;
+  --ifm-navbar-height: 60px;
+
+  /* Borders */
+  --ifm-border-radius: 4px;
+  --ifm-global-radius: 4px;
+
+  /* Code */
+  --ifm-code-font-size: 90%;
+  --ifm-code-border-radius: 3px;
+
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ifm-global-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-tlw: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+
+  /* Footer */
+  --ifm-footer-background-color: var(--color-navy);
+  --ifm-footer-color: var(--color-light-gray);
+  --ifm-footer-link-color: var(--color-light-gray);
+  --ifm-footer-link-hover-color: var(--color-gold);
+
+  /* Navbar */
+  --ifm-navbar-background-color: var(--color-white);
+  --ifm-navbar-shadow: 0 1px 0 var(--color-light-gray);
+  --ifm-navbar-link-color: var(--color-navy);
+  --ifm-navbar-link-hover-color: var(--color-gold);
+
+  /* Sidebar */
+  --ifm-sidebar-width: 280px;
+  --ifm-toc-border-color: var(--color-light-gray);
+
+  /* Links */
+  --ifm-link-color: var(--color-navy);
+  --ifm-link-hover-color: var(--color-gold-dark);
+  --ifm-link-decoration: none;
+
+  /* Global */
+  --ifm-background-color: var(--color-white);
+  --ifm-background-surface-color: var(--color-off-white);
+  --ifm-text-color: var(--color-dark-gray);
+  --ifm-hr-border-color: var(--color-light-gray);
+}
+
+/* Dark Mode Overrides */
+[data-theme='dark'] {
+  --ifm-color-primary: #5d8ab4;
+  --ifm-color-primary-dark: #4d7db0;
+  --ifm-color-primary-darker: #4776ab;
+  --ifm-color-primary-darkest: #3a638f;
+  --ifm-color-primary-light: #6d99b8;
+  --ifm-color-primary-lighter: #779fbb;
+  --ifm-color-primary-lightest: #8bb0c6;
+
+  --color-gold: #d4b44a;
+  --color-gold-light: #e0c36d;
+  --color-gold-dark: #c9a227;
+
+  --color-white: #1a1a2e;
+  --color-off-white: #16213e;
+  --color-light-gray: #2d3a4f;
+  --color-medium-gray: #a0a8b4;
+  --color-dark-gray: #e9ecef;
+  --color-navy: #0f3460;
+
+  --ifm-background-color: #0f0f1a;
+  --ifm-background-surface-color: #1a1a2e;
+  --ifm-text-color: #e9ecef;
+  --ifm-hr-border-color: #2d3a4f;
+
+  --ifm-navbar-background-color: #1a1a2e;
+  --ifm-navbar-shadow: 0 1px 0 #2d3a4f;
+  --ifm-footer-background-color: #0f0f1a;
+}
+
+/* ================================
+   Typography & Headings
+   ================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+  color: var(--color-gold-light);
+}
+
+/* ================================
+   Navbar Customization
+   ================================ */
+.navbar {
+  box-shadow: var(--ifm-navbar-shadow);
+  padding: 0.5rem 1rem;
+}
+
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 700;
+  color: var(--color-navy);
+  font-size: 1.25rem;
+}
+
+[data-theme='dark'] .navbar__title {
+  color: var(--color-gold);
+}
+
+.navbar__link {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--color-gold);
+}
+
+/* GitHub icon in navbar */
+.header-github-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%231e3a5f' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
+}
+
+[data-theme='dark'] .header-github-link::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23d4b44a' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E") no-repeat;
+  background-size: contain;
+}
+
+/* ================================
+   Footer Customization
+   ================================ */
+.footer {
+  background-color: var(--color-navy);
+  color: var(--color-light-gray);
+  padding: 2rem 1rem;
+}
+
+[data-theme='dark'] .footer {
+  background-color: #0a0a14;
+}
+
+.footer__title {
+  color: var(--color-gold);
+  font-family: var(--ifm-heading-font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.footer__link-item {
+  color: var(--color-light-gray);
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--color-gold);
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: var(--color-medium-gray);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ================================
+   Sidebar Customization
+   ================================ */
+.menu {
+  font-size: 0.9rem;
+}
+
+.menu__link {
+  border-radius: var(--ifm-border-radius);
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.menu__link:hover:not(.menu__link--active) {
+  background-color: var(--color-off-white);
+  color: var(--color-gold-dark);
+}
+
+[data-theme='dark'] .menu__link:hover:not(.menu__link--active) {
+  background-color: var(--color-navy);
+}
+
+.menu__link--active {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+[data-theme='dark'] .menu__link--active {
+  background-color: var(--color-gold-dark);
+  color: var(--color-navy);
+}
+
+.sidebar-toggle {
+  color: var(--color-navy);
+}
+
+[data-theme='dark'] .sidebar-toggle {
+  color: var(--color-gold);
+}
+
+/* ================================
+   Content / Article Styling
+   ================================ */
+.markdown {
+  line-height: var(--ifm-line-height-base);
+}
+
+.markdown h1:first-child {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 0.5rem;
+}
+
+article header h1 {
+  font-family: var(--ifm-heading-font-family);
+  color: var(--color-navy);
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 0.5rem;
+}
+
+[data-theme='dark'] article header h1 {
+  color: var(--color-gold-light);
+}
+
+/* Blockquotes */
+blockquote {
+  background-color: var(--color-off-white);
+  border-left: 4px solid var(--color-gold);
+  border-radius: 0 var(--ifm-border-radius) var(--ifm-border-radius) 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+[data-theme='dark'] blockquote {
+  background-color: var(--color-navy);
+  border-left-color: var(--color-gold);
+}
+
+blockquote p {
+  margin: 0;
+  color: var(--color-dark-gray);
+}
+
+[data-theme='dark'] blockquote p {
+  color: var(--color-light-gray);
+}
+
+/* ================================
+   Tables
+   ================================ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: var(--ifm-border-radius);
+  overflow: hidden;
+}
+
+table th {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+
+[data-theme='dark'] table th {
+  background-color: var(--color-gold-dark);
+  color: var(--color-navy);
+}
+
+table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+table tr:hover {
+  background-color: var(--color-off-white);
+}
+
+[data-theme='dark'] table tr:hover {
+  background-color: var(--color-navy);
+}
+
+/* ================================
+   Code Blocks
+   ================================ */
+code {
+  background-color: var(--color-off-white);
+  border-radius: var(--ifm-code-border-radius);
+  color: var(--color-navy);
+  font-size: var(--ifm-code-font-size);
+  padding: 0.2em 0.4em;
+}
+
+[data-theme='dark'] code {
+  background-color: var(--color-navy);
+  color: var(--color-gold-light);
+}
+
+pre {
+  background-color: var(--color-off-white);
+  border-radius: var(--ifm-border-radius);
+  border: 1px solid var(--color-light-gray);
+}
+
+[data-theme='dark'] pre {
+  background-color: #1a1a2e;
+  border-color: var(--color-navy);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Inline code */
+:not(pre) > code {
+  background-color: var(--color-light-gray);
+  color: var(--color-navy);
+}
+
+[data-theme='dark'] :not(pre) > code {
+  background-color: var(--color-navy);
+  color: var(--color-gold-light);
+}
+
+/* ================================
+   DocPage / Table of Contents
+   ================================ */
+.table-of-contents__link {
+  font-size: 0.85rem;
+  color: var(--color-medium-gray);
+  transition: color 0.2s ease;
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--color-gold-dark);
+  text-decoration: none;
+}
+
+[data-theme='dark'] .table-of-contents__link:hover,
+[data-theme='dark'] .table-of-contents__link--active {
+  color: var(--color-gold);
+}
+
+/* ================================
+   Paginator / Navigation
+   ================================ */
+.pagination-nav__link {
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--ifm-border-radius);
+  transition: all 0.2s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--color-gold);
+  background-color: var(--color-off-white);
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  border-color: var(--color-gold);
+  background-color: var(--color-navy);
+}
+
+.pagination-nav__label {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+}
+
+/* ================================
+   Admonitions / Alerts
+   ================================ */
+.admonition {
+  border-radius: var(--ifm-border-radius);
+  border-left: 4px solid var(--color-gold);
+}
+
+.admonition-heading {
+  font-family: var(--ifm-heading-font-family);
+}
+
+.admonition-note {
+  background-color: var(--color-off-white);
+}
+
+[data-theme='dark'] .admonition-note {
+  background-color: var(--color-navy);
+}
+
+/* ================================
+   Search
+   ================================ */
+.navbar__search-input {
+  border-radius: var(--ifm-border-radius);
+  border: 1px solid var(--color-light-gray);
+  background-color: var(--color-off-white);
+}
+
+[data-theme='dark'] .navbar__search-input {
+  background-color: var(--color-navy);
+  border-color: var(--color-dark-gray);
+}
+
+/* ================================
+   Scrollbar Styling
+   ================================ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-off-white);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: var(--color-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-medium-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-navy);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: var(--color-dark-gray);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* ================================
+   Selection
+   ================================ */
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+[data-theme='dark'] ::selection {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+/* ================================
+   Focus States
+   ================================ */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ================================
+   Utility Classes
+   ================================ */
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-navy {
+  color: var(--color-navy);
+}
+
+.bg-navy {
+  background-color: var(--color-navy);
+}
+
+.bg-gold {
+  background-color: var(--color-gold);
+}
+
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+/* Minimalist spacing adjustments */
+.markdown {
+  max-width: 800px;
+}
+
+.container.padding-top--padding-top {
+  padding-top: 2rem;
+}
+
+.theme-doc-breadcrumbs {
+  margin-bottom: 1rem;
+}
+
+/* Smooth page transitions */
+body {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Article prose improvements */
+.markdown {
+  line-height: 1.8;
+}
+
+.markdown p {
+  margin-bottom: 1.25rem;
+}
+
+.markdown li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquote styling */
+.markdown blockquote {
+  border-left: 4px solid var(--gold-accent);
+  background: var(--card-bg);
+  padding: 16px 20px;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.markdown blockquote p {
+  margin: 0;
+}

@@ -1,0 +1,10 @@
+{
+  "label": "Letters",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/letters/overview",
+    "title": "Letters Overview",
+    "description": "All shareholder letters from Warren Buffett, 1956-2024"
+  }
+}

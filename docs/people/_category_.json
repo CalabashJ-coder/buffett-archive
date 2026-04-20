@@ -1,0 +1,10 @@
+{
+  "label": "People",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/people",
+    "title": "Key People",
+    "description": "Key figures in Buffett's investment world"
+  }
+}

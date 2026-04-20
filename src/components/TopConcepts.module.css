@@ -1,0 +1,80 @@
+.section {
+  padding: 60px 20px;
+  background: #f8f9fc;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 40px;
+  font-family: Georgia, serif;
+}
+
+.conceptsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.concept {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1px solid #e0e0e8;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1a1a2e;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.concept:hover {
+  border-color: #c9a227;
+  box-shadow: 0 4px 12px rgba(26, 26, 46, 0.08);
+  text-decoration: none;
+}
+
+.conceptName {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.conceptCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  padding: 2px 8px;
+  background: #1a1a2e;
+  color: #c9a227;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.viewAll {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.viewAllLink {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #1a1a2e;
+  color: #c9a227;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.viewAllLink:hover {
+  background: #2a2a3e;
+  text-decoration: none;
+}

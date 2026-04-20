@@ -1,0 +1,10 @@
+{
+  "label": "Companies",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/companies",
+    "title": "Companies",
+    "description": "Companies mentioned in Buffett's letters"
+  }
+}

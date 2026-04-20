@@ -1,0 +1,10 @@
+{
+  "label": "Concepts",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/concepts",
+    "title": "Investment Concepts",
+    "description": "49 investment concepts from Buffett's letters"
+  }
+}
