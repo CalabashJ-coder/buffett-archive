@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "framework": null,
+  "regions": ["iad1"],
+  "buildEnv": {
+    "NODE_VERSION": "20"
+  }
+}
