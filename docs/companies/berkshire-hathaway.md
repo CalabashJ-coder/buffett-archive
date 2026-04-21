@@ -32,6 +32,6 @@ Berkshire Hathaway started as a struggling textile company in Rhode Island. Buff
 
 ## Mentioned Letters
 
-- [1965 Letter](/docs/letters/berkshire/1965) - First year mentioned
+- [1977 Letter](/docs/letters/berkshire/1977) - First full year documented
 - [1977 Letter](/docs/letters/berkshire/1977)
 - [1989 Letter](/docs/letters/berkshire/1989)

@@ -41,5 +41,4 @@ In early Berkshire years, Buffett focused on companies trading below book value.
 ## Mentioned Letters
 
 - [1977 Letter](/docs/letters/berkshire/1977)
-- [1983 Letter](/docs/letters/berkshire/1983)
 - [1989 Letter](/docs/letters/berkshire/1989)

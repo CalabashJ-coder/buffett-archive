@@ -6,17 +6,17 @@ A comprehensive collection of Warren Buffett's shareholder letters, spanning 70 
 
 35 letters written to partners in the Buffett Partnership Ltd.
 
-[View all Partnership Letters →](partnership/1956)
+[View all Partnership Letters →](/docs/letters/partnership/intro)
 
 ## Berkshire Hathaway Letters (1965-2024)
 
 60 annual letters to Berkshire Hathaway shareholders.
 
-[View all Berkshire Letters →](berkshire/1965)
+[View all Berkshire Letters →](/docs/letters/berkshire/1977)
 
 ## Special Letters
 
 Occasional letters on specific topics.
 
-- [Past, Present, Future (2014)](special/past-present-future)
-- [Thanksgiving 2025](special/thanksgiving-2025)
+- [Past, Present, Future (2014)](/docs/letters/special/past-present-future)
+- [Thanksgiving 2025](/docs/letters/special/thanksgiving-2025)
