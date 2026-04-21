@@ -17,7 +17,7 @@ const config = {
   // You can deploy to GitHub pages, but it is not required.
   organizationName: 'buffett-archive',
   projectName: 'buffett-archive',
-  trailingSlash: false,
+  trailingSlash: true,
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
